@@ -1,0 +1,30 @@
+Proxy là phương thức dùng 1 class có cùng interface để bọc lại 1 cái  class để gọi các phương thức hoặc khởi tạo nó(
+
+chủ yếu được dùng cho 2 cách: thứ 1 có 1 expensive class mà chỉ muốn khởi tạo khi sử dụng nó(lazy loading), thứ 2 là check authorize, validate
+)
+
+
+The Proxy Pattern is a design pattern used in software engineering to provide a surrogate or placeholder for another object to control access to it. It is typically used in situations where you want to add an extra level of control or functionality to the interaction
+with an object. Here are some common scenarios where you might need to use the Proxy Pattern:
+
+1. Lazy Loading: When you have a resource-intensive object, such as a large image or a database connection, and you want to delay its creation until it's actually needed. A proxy can be used to create the real object only when a method is called that requires it.
+
+2. Access Control: To control and restrict access to an object, especially in cases where you want to implement authorization or security checks before allowing access to the real object. The proxy can enforce these access controls.
+
+3. Logging: When you want to log interactions with an object, like method calls and their arguments, for debugging or auditing purposes. A proxy can intercept these calls and log the information.
+
+4. Caching: If you want to add caching mechanisms to an expensive operation, a proxy can store the results of expensive operations and return cached results for subsequent requests.
+
+5. Remote Proxy: When you need to represent an object that exists in a different address space, such as a remote server or a distributed system. The proxy can handle communication and serialization of data between the client and the remote object.
+
+6. Virtual Proxy: To create placeholder objects that stand in for expensive-to-create objects until they are actually needed. This is often used in scenarios like rendering images or complex documents.
+
+7. Counting References: In cases where you need to keep track of the number of references to an object. The proxy can maintain a count of references and take appropriate action when the count reaches zero, such as deallocating resources.
+
+8. Monitoring: To add monitoring or instrumentation to an object to track its usage or performance metrics.
+
+9. Threading: When you need to control access to an object from multiple threads. A proxy can synchronize access to the real object to ensure thread safety.
+
+10. Stubbing: In distributed systems, when you want to create a placeholder for a remote object that doesn't exist yet. The proxy can simulate the behavior of the remote object until it becomes available.
+
+11. The Proxy Pattern allows you to add these functionalities without modifying the actual object, promoting a separation of concerns and making the code more maintainable and extensible. It's particularly useful when you want to control access to objects or add some form of indirection to them.
